@@ -1,0 +1,7 @@
+#!/bin/sh
+cd $(dirname ${BASH_SOURCE:-$0})
+## https://qiita.com/fezrestia/items/bfd48decebe024bc9ba2
+while true; do
+    adb logcat -v time | logcat_color.awk
+    echo "#### DEVICE DISCONNECTED !"
+done
